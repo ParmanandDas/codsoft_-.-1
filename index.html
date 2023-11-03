@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CocaCola-Landing-Page</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#">
+                <img src="logo.png" class="logo" alt="logo">
+            </a>
+            <div class="toggle" onclick="toggleMenu()"></div>
+            <ul class="navigation">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Menu</a>
+                </li>
+                <li>
+                    <a href="#">What's New</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Taste The Feeling</h2>
+                <p>COCA-COLA: CARBONATED WATER. COCA-COLA IS A REGISTERED TRADEMARK OF THE COCA-COLA COMPANY. VEGETARIAN PRODUCT. COCA-COLA ZERO SUGAR: CARBONATED WATER. CONTAINS NON-CALORIC SWEETENER. THIS CARBONATED WATER CONTAINS AN ADMIXTURE OF SUCRALOSE AND ACESULFAME POTASSIUM. NOT RECOMMENDED FOR CHILDREN, PREGNANT AND LACTATING MOTHERS. TRADEMARK OWNER: THE COCA-COLA COMPANY. VEGETARIAN PRODUCT.</p>
+                <a href="#">Learn More</a>
+            </div>
+
+            <div class="imgBox">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="cocacola1.png">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="cocacola2.png">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="cocacola3.png">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="cocacola4.png">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="cocacola5.png">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="cocacola6.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <ul class="social">
+            <li>
+                <a href="#">
+                    <img src="facebook-f.png" alt="facebook">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="twitter.png" alt="twitter">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="instagram-new--v1.png" alt="Instagram">
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <script>
+        var swiper = new swiper('.swiper-container' , {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                roate:  0,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            loop: true,
+        });
+
+        function toggleMenu()
+        {
+            const menuToggle = document.querySelector('.toggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
